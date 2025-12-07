@@ -1,0 +1,135 @@
+%------------------------
+% Latex CV Template for COS Northeastern University Faculty
+% Author: Zoe Kearney
+
+% Formatting: https://www.overleaf.com/latex/templates/coles-resume-template/qhpynjcvjpcj
+
+% Follows: Template Dossier Documents, Office of the Provost, Northeastern; July 1, 2025 version (https://provost.northeastern.edu/faculty-affairs/). 
+
+%Disclaimer: This template is intended to complement Northeastern University’s dossier guidelines for tenure and promotion cases, as well as discipline-specific CV standards.
+
+% License: LaTeX Project Public License 1.3c
+%------------------------
+
+% Document class and font size
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{a4paper, margin=1in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+\usepackage{lipsum} % For filler text
+\usepackage{changepage} %For Indenting
+
+% Formatting
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+\newenvironment{subs} %Indenting
+  {\adjustwidth{2em}{0pt}}
+  {\endadjustwidth}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{empty}
+
+% Header
+\begin{center}
+    \textbf{\Large Hoja Referencial Mips 32 }\\[12pt] % Name
+    \textbf{Santiago Blanca 33148530}\\[1pt] % CV
+     
+\end{center}
+
+
+%------------------------
+
+    \begin{center}
+ {\large \textbf{Categorias}}
+    \noindent
+    \end{center}
+%------------------------------------
+\section*{Aritmética}
+
+\begin{center}
+\begin{tabular}{l l l}
+    \textbf{Instrucción} & \textbf{Ejemplo} & \textbf{Significado} \\
+    \hline
+    add & \texttt{add \$s1,\$s2,\$s3} & \$s1 = \$s2 + \$s3 \\
+    sub & \texttt{sub \$s1,\$s2,\$s3} & \$s1 = \$s2 - \$s3 \\
+    addi & \texttt{addi \$s1,\$s2,100} & \$s1 = \$s2 + 100 \\
+\end{tabular}
+\end{center}
+
+
+%------------------------------------
+\section*{Transferencia de datos}
+
+\begin{center}
+\begin{tabular}{l l l}
+    \textbf{Instrucción} & \textbf{Ejemplo} & \textbf{Significado} \\
+    \hline
+    lw  & \texttt{lw \$s1,100(\$s2)}  & \$s1 = Memory[\$s2 + 100] \\
+    sw  & \texttt{sw \$s1,100(\$s2)}  & Memory[\$s2 + 100] = \$s1 \\
+    lb  & \texttt{lb \$s1,100(\$s2)}  & \$s1 = Memory[\$s2 + 100] \\
+    sb  & \texttt{sb \$s1,100(\$s2)}  & Memory[\$s2 + 100] = \$s1 \\
+\end{tabular}
+\end{center}
+
+%------------------------------------  
+\section*{Lógica}
+
+\begin{center}
+\begin{tabular}{l l l}
+    \textbf{Instrucción} & \textbf{Ejemplo} & \textbf{Significado} \\
+    \hline
+    and  & \texttt{and \$s1,\$s2,\$s3}  & \$s1 = \$s2 \& \$s3 \\
+    or   & \texttt{or \$s1,\$s2,\$s3}   & \$s1 = \$s2 \;|\; \$s3 \\
+    andi & \texttt{andi \$s1,\$s2,100}  & \$s1 = \$s2 \& 100 \\
+    sll  & \texttt{sll \$s1,\$s2,10}    & \$s1 = \$s2 \texttt{<<} 10 \\
+    srl  & \texttt{srl \$s1,\$s2,10}    & \$s1 = \$s2 \texttt{>>} 10 \\
+\end{tabular}
+\end{center}
+
+
+%------------------------------------
+\section*{Salto condicional}
+
+\begin{center}
+\begin{tabular}{l l l}
+    \textbf{Instrucción} & \textbf{Ejemplo} & \textbf{Significado} \\
+    \hline
+    beq & \texttt{beq \$s1,\$s2,L}  & si (\$s1 == \$s2) ir a L \\
+    bne & \texttt{bne \$s1,\$s2,L}  & si (\$s1 != \$s2) ir a L \\
+    slt & \texttt{slt \$s1,\$s2,\$s3} &
+        \begin{tabular}[c]{@{}l@{}}si (\$s2 < \$s3) \$s1 = 1 \\ si no, \$s1 = 0\end{tabular} \\
+    slti & \texttt{slti \$s1,\$s2,100} &
+        \begin{tabular}[c]{@{}l@{}}si (\$s2 < 100) \$s1 = 1 \\ si no, \$s1 = 0\end{tabular} \\
+\end{tabular}
+\end{center}
+
+%------------------------------------
+\section*{Salto incondicional}
+
+\begin{center}
+\begin{tabular}{l l l}
+    \textbf{Instrucción} & \textbf{Ejemplo} & \textbf{Significado} \\
+    \hline
+    j   & \texttt{j 2500} & ir a 10000 \\
+    jr  & \texttt{jr \$ra} & ir a \$ra \\
+    jal & \texttt{jal 2500} & \$ra = PC + 4; ir a 10000 \\
+\end{tabular}
+\end{center}
+
+%------------------------
+
+% End document
+\end{document}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
